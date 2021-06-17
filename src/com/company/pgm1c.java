@@ -54,15 +54,17 @@ public class pgm1c {
             System.out.println("1.Push\n2.Pop\n3.Display\n4.EXIT");
             System.out.println("Enter your choice:");
             choice = sc.nextInt();
-            switch (choice) {
-                case 1 -> stkob.push();
-                case 2 -> {
-                    int popped = stkob.pop();
-                    if (popped != -1) System.out.println("Popped element is : " + popped);
-                }
-                case 3 -> stkob.display();
-                case 4 -> System.out.println("Thanks ");
-                default -> System.out.println("INVALID CHOICE try again");
+            switch (choice){
+                case 1:stkob.push();break;
+                case 2:int popped= stkob.pop();
+                    if(popped!=-1) System.out.println("Popped element is : "+popped);
+                    break;
+                case 3:stkob.display();break;
+                case 4:
+                    System.out.println("Thanks ");break;
+                default:
+                    System.out.println("INVALID CHOICE try again");
+
             }
         }while (choice!=4);
     }
