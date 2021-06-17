@@ -1,3 +1,5 @@
+package com.company;
+
 /*program 1
 1a Create a java class student with the following details as variables within it
 1. usn
