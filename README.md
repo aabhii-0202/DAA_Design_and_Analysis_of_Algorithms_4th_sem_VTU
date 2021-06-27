@@ -5,4 +5,4 @@ this is the repo of all the lab programs of subject daa in 4th sem of vtu
 you can find the step by step coding video on my youtube channel 
 https://youtube.com/playlist?list=PL6ozIZebkYcx8NDBwbv-pFzGvGULuZGB4
 please subscribe for more.
-Open the src fle for code
+Click on src/com/company for code.
