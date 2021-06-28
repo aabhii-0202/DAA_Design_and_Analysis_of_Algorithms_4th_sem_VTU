@@ -1,6 +1,6 @@
 package com.company;
 /*
- 8.     Find Minimum Cost Spanning Tree of a given connected undirected graph using Kruskal's
+       8.Find Minimum Cost Spanning Tree of a given connected undirected graph using Kruskal's
         algorithm. Use Union-Find algorithms in your program.
  */
 import java.util.*;
