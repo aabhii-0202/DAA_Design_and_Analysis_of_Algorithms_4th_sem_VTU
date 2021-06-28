@@ -71,7 +71,7 @@ public class pgm8 {
     }
 }
 /*
-    OUTPUT
+Example Out Put
 Enter number of nodes
 6
 Enter cost matrix
