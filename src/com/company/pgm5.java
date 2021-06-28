@@ -92,7 +92,7 @@ class mergeSort{
 }
 public class pgm5 {
     public static void main(String[] args) throws IOException {
-        mergeSort m=new mergeSort();
+        mergeSort m=new mergeSort();//making object
         m.process();
     }
 }
