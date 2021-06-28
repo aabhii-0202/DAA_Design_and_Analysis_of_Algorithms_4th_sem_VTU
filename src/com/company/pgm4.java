@@ -118,7 +118,7 @@ class Qsort {
 public class pgm4 {
     public static void main(String[] args)throws IOException {
         System.out.println("Enter the number of elements to be sorted:(>5000)");
-        Qsort qs=new Qsort();
+        Qsort qs=new Qsort();// making object
         qs.proccess();
     }
 }
