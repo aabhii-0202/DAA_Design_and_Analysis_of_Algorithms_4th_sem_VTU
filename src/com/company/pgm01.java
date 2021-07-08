@@ -25,7 +25,7 @@ class students {
         System.out.println("Phone = "+this.phone);
     }
 }
-class pgm1{
+class pgm01 {
     public static void main(String[] args) {
         students s1= new students("1RN19IS001","AMAN","ISE","9933");
         students s2= new students("1RN19IS002","Abhi","ISE","1340");

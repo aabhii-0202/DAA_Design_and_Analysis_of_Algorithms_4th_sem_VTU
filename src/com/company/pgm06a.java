@@ -8,7 +8,7 @@ package com.company;
     objects chosen shouldn’t exceed the capacity of the knapsack
  */
 import java.util.*;
-public class pgm6a {
+public class pgm06a {
     static int max(int a,int b){
         return (a>b)?a:b;
     }

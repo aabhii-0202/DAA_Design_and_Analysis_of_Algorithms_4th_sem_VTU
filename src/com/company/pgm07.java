@@ -4,7 +4,7 @@ package com.company;
     algorithm. Write the program in Java.
  */
 import java.util.*;
-class pgm7{
+class pgm07 {
     public int distance[] = new int[10];
     public int cost[][]=new int [10][10];
     public void compute(int n,int src){
@@ -36,7 +36,7 @@ class pgm7{
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the Number of n=Nodes \n");
         node=sc.nextInt();
-        pgm7 d=new pgm7();
+        pgm07 d=new pgm07();
         System.out.println("Enter the cost matrix weights: ");
         for( i=1;i<=node;i++)
             for(j=1;j<=node;j++){

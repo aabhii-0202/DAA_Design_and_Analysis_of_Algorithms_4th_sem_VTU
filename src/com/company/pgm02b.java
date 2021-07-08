@@ -6,7 +6,7 @@ package com.company;
  */
 import java.util.Scanner;
 import java.util.StringTokenizer;
-public class pgm2b {
+public class pgm02b {
     private String name,dob;
     public void input(){
         Scanner sc= new Scanner(System.in);
@@ -29,7 +29,7 @@ public class pgm2b {
     }
 
     public static void main(String[] args) {
-        pgm2b st=new pgm2b();
+        pgm02b st=new pgm02b();
         st.input();
         st.disp();
     }

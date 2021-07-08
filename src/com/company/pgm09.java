@@ -64,7 +64,7 @@ class MST {
         printMST(parent,Vertices);
     }
 }
-public class pgm9 {
+public class pgm09 {
     public static void main(String[] args) {
         MST c =new MST();
         c.ReadFromConsole();;

@@ -4,7 +4,7 @@ package com.company;
        b is equal to 0.
  */
 import java.util.Scanner;
-public class pgm3a {
+public class pgm03a {
     public static void main(String[] args) {
         int a ,b;
         float res;

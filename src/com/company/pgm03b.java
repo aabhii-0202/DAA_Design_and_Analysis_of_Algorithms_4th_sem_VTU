@@ -5,7 +5,7 @@ generates a random integer for every 1 second; second thread computes the square
 prints; third thread will print the value of cube of the numbers.
  */
 import java.util.Random;
-public class pgm3b {
+public class pgm03b {
     static int randomInt;
     public static void main(String[] args) {
         System.out.println("For 10 Random numbers");
@@ -22,8 +22,8 @@ class  Mythread extends Thread{
             //generating 10 random numbers
             while(i++<10){
                 Random rnd = new Random();
-                pgm3b.randomInt=rnd.nextInt(100);
-                System.out.println((i+1)+" Random integer is "+pgm3b.randomInt);
+                pgm03b.randomInt=rnd.nextInt(100);
+                System.out.println((i+1)+" Random integer is "+ pgm03b.randomInt);
                 new myThread2().start();
                 new mythread3().start();
                 Thread.sleep(1000);
@@ -40,13 +40,13 @@ class  Mythread extends Thread{
 //thread 2
 class myThread2 extends Thread{
     public void run(){
-        System.out.println("Square of "+pgm3b.randomInt+" is "+pgm3b.randomInt*pgm3b.randomInt);
+        System.out.println("Square of "+ pgm03b.randomInt+" is "+ pgm03b.randomInt* pgm03b.randomInt);
     }
 }
 //thread 3
 class mythread3 extends Thread{
     public void run(){
-        System.out.println("Cube of "+pgm3b.randomInt+" is "+pgm3b.randomInt*pgm3b.randomInt*pgm3b.randomInt);
+        System.out.println("Cube of "+ pgm03b.randomInt+" is "+ pgm03b.randomInt* pgm03b.randomInt* pgm03b.randomInt);
     }
 }
 

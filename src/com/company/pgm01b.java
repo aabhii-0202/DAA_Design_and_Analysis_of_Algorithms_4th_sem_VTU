@@ -23,7 +23,7 @@ class stud{
         System.out.println("Phone = "+this.phone);
     }
 }
-public class pgm1b {
+public class pgm01b {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("\n Enter number of students:");

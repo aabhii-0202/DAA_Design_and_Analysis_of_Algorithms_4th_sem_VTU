@@ -72,7 +72,7 @@ class contract extends staff{
         System.out.println("Contract Period: "+period);
     }
 }
-public class pgm2a {
+public class pgm02a {
     public static void main(String[] args) {
         teacher[] teach =new teacher[3];
         technical[] tech =new technical[3];
