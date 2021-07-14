@@ -1,70 +1,63 @@
 package com.company;
 import java.util.Scanner;
-public class pgm10b {
-    static int cost=0;
 
+public class pgm10b {
+    static int MAX=100;
+    static final int infinity=999;
     public static void main(String[] args) {
-        int[][] a =new int[10][10];
-        int[] visited =new int[10];
+        // TODO Auto-generated method stub
+        int cost=infinity;
+        int c[][]=new int[MAX][MAX];
+        int tour[]=new int[MAX];
         int n;
-        System.out.println("Enter number of cities");
+        System.out.println("enter the number of cities");
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
-        create(a,visited,n);
-        System.out.println("\n\npath is:");
-        mincost(a,n,0,visited);
-        display();
-    }
-    public static void display(){
-        System.out.println("\ntotal cost of tour= "+cost);
-    }
-    public static void mincost(int [][] a,int n,int city,int[] visited){
-        int i,city_no;
-        visited[city]=1;
-        System.out.print((city+1)+"-->");
-        city_no=least(a,visited,n,city);
-        if(city_no==999){
-            city_no=0;
-            System.out.print(" "+(city_no+1));
-            cost+=a[city][city_no];
-            return;
-        }
-        mincost(a,n,city_no,visited);
-    }
-    public static int least(int[][] a,int[] visited,int n,int c){
-        int i,min_node=999;
-        int min=999;
-        int new_min=0;
-        for(i=0;i<n;i++){
-            if(a[c][i]!=0&&visited[i]==0)
-                if(a[c][i]<min){
-                    min=a[i][0]+a[c][i];
-                    new_min=a[c][i];
-                    min_node=i;
-                }
-        }
-        if(min!=999)cost+=new_min;
-        return min_node;
-    }
-
-    public static void create(int[][] a,int[] visited ,int n){
-        System.out.println("\n enter the cost mqtrix:");
-        for(int i=0;i<n;i++){
-            System.out.println("row: "+(i+1));
-            for (int j=0;j<n;j++){
-                Scanner sc=new Scanner(System.in);
-                a[i][j]=sc.nextInt();
+        System.out.println("Enter cost matrix");
+        for(int i=0;i<n;i++)
+            for(int j=0;j<n;j++)
+            {
+                c[i][j]=sc.nextInt();
+                if(c[i][j]==0)
+                    c[i][j]=999;
             }
-            visited[i]=0;
-        }
-        System.out.println("\n\nThw cost matrix");
-        for(int i=0;i<n;i++){
-            System.out.println("\n");
-            for (int j=0;j<n;j++){
-                System.out.print(" "+a[i][j]);
+        for(int i=0;i<n;i++)
+            tour[i]=i;
+        cost=tspdp(c,tour,0,n);
+        System.out.println("Mintourcost:"+cost);
+        System.out.println("\nTour:");
+        for(int i=0;i<n;i++)
+            System.out.print(tour[i] + " -> ");
+        System.out.print(tour[0] + "\n");
+        sc.close();
+    }
+    static int tspdp(int c[][], int tour[], int start, int n)
+    {
+        int i,j,k;
+        int temp[]=new int [MAX];
+        int mintour[]=new int[MAX];
+        int mincost,cost;
+        if (start== n-2)
+            return c[tour[n-2]][tour[n-1]]+c[tour[n-1]][0];
+        mincost=infinity;
+        for(i=start+1;i<n;i++)
+        {
+            for(j=0;j<n;j++)
+                temp[j]=tour[j];
+            temp[start+1] = tour[i];
+            temp[i] = tour[start+1];
+            if(c[tour[start]][tour[i]] + (cost = tspdp(c,temp,start+1,n)) < mincost)
+            {
+                mincost=c[tour[start]][tour[i]] + cost;
+                for(k=0;k<n;k++)
+                    mintour[k]=temp[k];
             }
         }
-    }
+        for(i=0;i<n;i++)
+            tour[i]=mintour[i];
+        return mincost;
 
+
+    }
 
 }
