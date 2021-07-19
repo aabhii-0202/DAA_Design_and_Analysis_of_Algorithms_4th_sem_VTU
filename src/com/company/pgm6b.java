@@ -7,13 +7,13 @@ package com.company;
 
  */
 import java.util.*;
-public class pgm6b {
+class pgm06bKnapsack_Greedy {
     double[] weight;
     double[] benefit;
     double[] ratio;
     double w;
 
-    pgm6b() {
+    pgm06bKnapsack_Greedy() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of objects ");
         int nitems = sc.nextInt();
@@ -65,7 +65,7 @@ public class pgm6b {
     }
 
     public static void main(String[] args) {
-        pgm6b k=new pgm6b();
+        pgm06bKnapsack_Greedy k=new pgm06bKnapsack_Greedy();
         k.fill();
     }
 }

@@ -10,7 +10,7 @@ complexity analysis: worst case, average case and best case.
 import java.io.*;
 import java.util.*;
 class Qsort {
-    int array[];
+    int[] array;
     int length;
     int cnt;
     int size;
@@ -24,10 +24,9 @@ class Qsort {
         int[] inputArr = new int[size];
         getRandomNum(inputArr);
         sc.close();
-        int temparr[] = new int[size];
-        for (int i = 0; i < inputArr.length; i++) {
-            temparr[i] = inputArr[i];
-        }//so now we will begin to sort
+        int[] temparr = new int[size];
+        //so now we will begin to sort
+        System.arraycopy(inputArr, 0, temparr, 0, inputArr.length); //copies array
         sort(inputArr);
         System.out.println();
         System.out.println("The time complexity for best case is "+cnt);
@@ -73,10 +72,10 @@ class Qsort {
         if (inputarr == null || inputarr.length == 0) return;
         this.array=inputarr;
         length=inputarr.length;
-        if(flag=="best"||flag=="average"){
+        if(flag.equals("best") || flag.equals("average")){   //flag=="average" and flag.equals("average") are same
             pivot=array[length/2];
             quicksort(0,length-1,pivot);
-        }else if(flag=="worst"){
+        }else if(flag.equals("worst")){
             pivot=array[0];
             quicksort(0,length-1,pivot);
         }
@@ -115,7 +114,7 @@ class Qsort {
         array[j]=temp;
     }
 }
-public class pgm04 {
+public class pgm04_QuickSort {
     public static void main(String[] args)throws IOException {
         System.out.println("Enter the number of elements to be sorted:(>5000)");
         Qsort qs=new Qsort();// making object

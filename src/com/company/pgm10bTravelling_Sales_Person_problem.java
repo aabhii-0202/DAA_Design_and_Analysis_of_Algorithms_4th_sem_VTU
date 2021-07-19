@@ -1,7 +1,9 @@
 package com.company;
 import java.util.Scanner;
-
-public class pgm10b {
+/*
+Implement Travelling Sales Person problem using Dynamic programming.
+ */
+public class pgm10bTravelling_Sales_Person_problem {
     static int MAX=100;
     static final int infinity=999;
     public static void main(String[] args) {
@@ -31,11 +33,11 @@ public class pgm10b {
         System.out.print(tour[0] + "\n");
         sc.close();
     }
-    static int tspdp(int c[][], int tour[], int start, int n)
+    static int tspdp(int[][] c, int[] tour, int start, int n)
     {
         int i,j,k;
-        int temp[]=new int [MAX];
-        int mintour[]=new int[MAX];
+        int[] temp =new int [MAX];
+        int[] mintour =new int[MAX];
         int mincost,cost;
         if (start== n-2)
             return c[tour[n-2]][tour[n-1]]+c[tour[n-1]][0];

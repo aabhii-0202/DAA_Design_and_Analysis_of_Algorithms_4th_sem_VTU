@@ -63,7 +63,7 @@ class compute {
     }
 }
 
-public class pgm08 {
+public class pgm08_Kruskals_algorithm {
     public static void main(String[] args) {
         compute c=new compute();
         c.readfromconsole();

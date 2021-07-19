@@ -1,12 +1,12 @@
 package com.company;
 //Implement All Pairs Shortest Paths problem using Floyd's algorithm
 import java.util.Scanner;
-public class pgm10a {
-    private int  dmat[][];
+public class pgm10a_Floyds_algorithm {
+    private int[][] dmat;
     private int n;
     public static final int INFINITY=999;
 
-    public pgm10a(int n){
+    public pgm10a_Floyds_algorithm(int n){
         dmat = new int [n+1][n+1];
         this.n=n;
     }
@@ -53,7 +53,7 @@ public class pgm10a {
             }
         }
         System.out.println("The all pair Shortest Distance of the Graph is:");
-        pgm10a floyd =new pgm10a(n);
+        pgm10a_Floyds_algorithm floyd =new pgm10a_Floyds_algorithm(n);
         floyd.floyd_compute(adjmat);
         sc.close();
 
